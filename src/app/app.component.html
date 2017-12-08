@@ -1,0 +1,33 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<nav class="navbar  navbar-default">
+  <div class="navbar-header">
+    <a class="navbar-brand"  routerLink="/">Home</a>
+  </div>
+  <ul class="nav navbar-nav">
+    <li class="nav-item" routerLinkActive="active">
+      <a class="nav-link" routerLink="/users">Users</a></li>
+  </ul>
+</nav>
+
+<div class="container">
+  <div class="panel panel-primary">
+    <!--<div class="panel-heading"><h3>Netsecop Patner API v0</h3></div>-->
+    <div class="panel-body">
+      <form class="form-inline">
+        <div class="form-group">
+          <label for="token"> &nbsp;Token: &nbsp;</label>
+          <input type="password" class="form-control" id="token" [(ngModel)]="apiToken.id" name="token">
+        </div>
+        <button (click)="goBack()" type="button" class="btn btn-primary">Back</button>
+        <button (click)="startTimer()" type="button" class="btn btn-success">Start Timer</button>
+        <button (click)="stopTimer()" type="button" class="btn btn-danger">Stop Timer</button>
+        <button (click)="doTest()" type="button" class="btn btn-warning">Test</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
+<app-messages></app-messages>
+

@@ -1,0 +1,22 @@
+<div class="container">
+
+  <div class="panel panel-primary">
+    <div class="panel panel-heading">
+      <h3>{{detailInf.title}} Detail</h3>
+    </div>
+    <div class="panel-body" *ngIf="item">
+      <ul class="list-group">
+        <li class="list-group-item" *ngFor="let key of objKeys">
+          <div class="row">
+            <div class="col-xs-3"><strong>{{key}}&nbsp;</strong></div>
+            <div class="col-xs-9  pull-left">{{item[key]}}</div>
+          </div>
+        </li>
+      </ul>
+      <!--<button type="button" class="btn btn-primary" (click)="goBack()">Back</button>-->
+      <!--<button type="button" class="btn btn-danger" (click)="delete(user); $event.stopPropagation()">x</button>-->
+    </div>
+  </div>
+
+
+</div>
